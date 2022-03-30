@@ -5,5 +5,14 @@
 {% endblock css_link %}
 {% block page_title %}Home Page{% endblock page_title %}
 {% block body %}
-<h1 class="title">Welcome to our home page!</h1>
+    <h1 class="title">Welcome to our home page!</h1>
+    <button type="butotn" onclick="doBlur();">click me!</button>
+    <p class="testing"> hi </p>
+    <script defer>
+        
+        function doBlur() {
+            document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
+
+        }
+    </script>
 {% endblock body %}

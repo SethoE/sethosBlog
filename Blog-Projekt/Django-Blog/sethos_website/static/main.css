@@ -1,29 +1,41 @@
 html, body {
-    margin: 0 !important;
-    min-width: 860px;
-    width: auto !important;
+  top: 0;
+  margin: 0 !important;
+  min-width: 860px;
+  width: auto !important;
 }
 /* --flame: #cf5c36ff;
 --gunmetal: #242f40ff;
 --blue-munsell: #568ea3ff;
 --middle-blue: #68c3d4ff; */
 .navbar {
-    background-color: #cf5c36ff;
-    overflow: hidden;
+  margin-top: 0px;
+  background-color: #cf5c36ff;
+  height: 71px;
+  z-index: 1; /* Die Ebene auf der Z-Achse.*/
+  overflow-y: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: .7s;
 }
 .index, .posts {
-    text-decoration: none;
-    float: left;
-    color: white;
-    text-align: center;
-    font-size: 20px;
-    padding: 24px 30px;
+  text-decoration: none;
+  float: left;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 24px 30px;
+  transition: 0.4s;
 }
 .index:hover, .posts:hover {
   background-color: #242f40ff;
   cursor: pointer;
 }
-
+.main_body {
+  margin-top: 71px;
+}
 /*Style for the sidebar*/
 
 /* width */

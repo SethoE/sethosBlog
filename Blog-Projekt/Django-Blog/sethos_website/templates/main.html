@@ -12,11 +12,30 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <nav id="navbar" class="navbar">
             <a class="index" href="/"><i class="fa fa-home"> Home</i></a>
             <a class="posts" href="posts">All Posts</a>
         </nav>
     </header>
-    {% block body %}{% endblock body %}
+    <div id="main_body" class="main_body">
+        {% block body %}{% endblock body %}
+    </div>
+    <script>
+        var navbar = document.getElementById("navbar");
+        var bool = 0;
+        var oldscrollY = this.scrollY;
+        window.onscroll = function(e) {
+            if(this.scrollY > oldscrollY) {
+                if(this.scrollY >= 200) {
+                    navbar.style.height = "0";
+                }
+                console.log("Down");
+            } else {
+                navbar.style.height = "71px";
+                console.log("Up");
+            }
+            oldscrollY = this.scrollY;
+          }
+    </script>
 </body>
 </html>
