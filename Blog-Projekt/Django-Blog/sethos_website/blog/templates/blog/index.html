@@ -1,13 +1,64 @@
 {% extends "main.html" %}
 {% load static %}
 {% block css_link %}
-<link rel="stylesheet" href="{% static "index.css"%}">
+<link rel="stylesheet" href="{% static "blog/index.css"%}">
 {% endblock css_link %}
 {% block page_title %}Home Page{% endblock page_title %}
 {% block body %}
-    <h1 class="title">Welcome to our home page!</h1>
-    <button type="butotn" onclick="doBlur();">click me!</button>
-    <p class="testing"> hi </p>
+    <section id="homePageGreeting">
+        <header>
+            <h2 class="greetingTextHeader">Setho's anime blogs</h2>
+            <div class="imgProfile">
+                <img src="{% static "blog/images/Shinji Ikari 02.jpg"%}" alt="Profile picture">
+            </div>
+        </header>
+        <p class="greetingTextDescription">Hi and welcome to my page. Hier you will find reviews and recommendations of anime I watched. Please be aware that I'm doing this merely as a hobby and only on occation will I update my page with new reviews.</p>
+    </section>
+    <section class="latest-posts">
+        <h2 class="latestPostHeader">My lastest reviews</h2>
+        <ul>
+            <li>
+                <article>
+                    <div class="individualPost">
+                        <a class="postLink" href="">
+                            <img src="https://static.wikia.nocookie.net/welcometothenhk/images/8/80/-animepaper.net-vector-standard-anime-welcome-to-nhk-vecto-satou-tatsuhiro-39608-moutonzare-preview-d0ae7e2c.jpg/revision/latest/scale-to-width-down/250?cb=20130414131308" alt="Welcome to the NHK">
+                            <div class="postContent">
+                                <h3>My review one: Welcome to the NHK</h3>
+                                <p>Is Satou Tatsuhiro (佐藤達広) a worthless human beings?</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <div class="individualPost">
+                        <a class="postLink" href="">
+                            <img src="https://static.wikia.nocookie.net/welcometothenhk/images/8/80/-animepaper.net-vector-standard-anime-welcome-to-nhk-vecto-satou-tatsuhiro-39608-moutonzare-preview-d0ae7e2c.jpg/revision/latest/scale-to-width-down/250?cb=20130414131308" alt="Welcome to the NHK">
+                            <div class="postContent">
+                                <h3>My review one: Welcome to the NHK</h3>
+                                <p>Is Satou Tatsuhiro (佐藤達広) a worthless human beings?</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <div class="individualPost">
+                        <a class="postLink" href="">
+                            <img src="https://static.wikia.nocookie.net/welcometothenhk/images/8/80/-animepaper.net-vector-standard-anime-welcome-to-nhk-vecto-satou-tatsuhiro-39608-moutonzare-preview-d0ae7e2c.jpg/revision/latest/scale-to-width-down/250?cb=20130414131308" alt="Welcome to the NHK">
+                            <div class="postContent">
+                                <h3>My review one: Welcome to the NHK</h3>
+                                <p>Is Satou Tatsuhiro (佐藤達広) a worthless human beings?</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            </li>
+        </ul>
+    </section>
+    {% include "blog/includes/about.html" %}
     <script defer>
         
         function doBlur() {
