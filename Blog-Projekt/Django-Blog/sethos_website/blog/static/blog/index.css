@@ -49,32 +49,9 @@ header img {
 .latest-posts .latestPostHeader {
     color: white;
     text-align: center;
+    text-decoration: underline;
 }
 
-.postLink {
-    text-decoration: none;
-}
-.individualPost {
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-}
-.individualPost a {
-    color: white;
-}
-.individualPost a:hover {
-    color: #acacac;
-}
-.individualPost img {
-    height: 200px;
-    border-radius: 10px;
-}
 .latest-posts ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-}
-.postLink, .postContent {
-    margin-left: 20px;
 }

@@ -1,0 +1,40 @@
+.postLink {
+    text-decoration: none;
+}
+.individualPostsContainer  {
+    display: flex;
+    flex-direction: column;
+}
+.individualPostsContainer li {
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.individualPost {
+    margin: 0;
+}
+.individualPost a {
+    display: block;
+    color: white;
+}
+.individualPost a:hover {
+    color: #acacac;
+}
+
+.postLink img {
+    margin-right: 20px; 
+    float: left;
+    height: 200px;
+    border-radius: 5px;
+}
+.postLink .postContent .contentTitle, .postLink .postContent .reviewTitle {
+    text-align: center;
+    margin: 0;
+}
+.postLink .postContent .reviewTitle {
+    margin-top: 5px;
+}
+.postLink .postContent .snippet {
+    color:white;
+    margin-right: 20px;
+}
