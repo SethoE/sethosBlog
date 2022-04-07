@@ -22,10 +22,15 @@
 }
 
 .postLink img {
-    margin-right: 20px; 
+    margin-right: 20px;
     float: left;
-    height: 200px;
+    width: auto;
+    height: auto;
+    max-height: 200px;
+    max-width: 200px;
+    min-height: 150px;
     border-radius: 5px;
+    object-fit: cover;
 }
 .postLink .postContent .contentTitle, .postLink .postContent .reviewTitle {
     text-align: center;

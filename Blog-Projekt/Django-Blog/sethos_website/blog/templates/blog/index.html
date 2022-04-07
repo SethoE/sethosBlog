@@ -17,14 +17,14 @@
     <section class="latest-posts">
         <h2 class="latestPostHeader">My lastest reviews</h2>
         <ul class="individualPostsContainer">
-            {% include "blog/includes/post.html" %}
-            {% include "blog/includes/post.html" %}
-            {% include "blog/includes/post.html" %}
+            {% for post in posts  %}
+                {% include "blog/includes/post.html" %}
+            {% endfor %}
         </ul>
     </section>
     {% include "blog/includes/about.html" %}
     <script defer>
-        
+
         function doBlur() {
             document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
 

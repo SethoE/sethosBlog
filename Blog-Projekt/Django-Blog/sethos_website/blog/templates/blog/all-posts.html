@@ -9,9 +9,9 @@
 <section class="all-posts">
     <h2 class="allPostsHeader">All my Reviews/Posts</h2>
     <ul class="individualPostsContainer">
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
-        {% include "blog/includes/post.html" %}
+        {% for post in posts  %}
+            {% include "blog/includes/post.html" %}
+        {% endfor %}
     </ul>
 </section>
 {% endblock body %}

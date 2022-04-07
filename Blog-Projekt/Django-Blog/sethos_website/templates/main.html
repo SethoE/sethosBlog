@@ -14,8 +14,8 @@
 <body>
     <header>
         <nav id="navbar" class="navbar">
-            <a class="index" href="/"><i class="fa fa-home"> Home</i></a>
-            <a class="posts" href="posts">All Posts</a>
+            <a class="index" href="{% url "home-page" %}"><i class="fa fa-home"> Home</i></a>
+            <a class="posts" href="{% url "allPosts-page" %}">All Posts</a>
         </nav>
     </header>
     <div id="main_body" class="main_body">
