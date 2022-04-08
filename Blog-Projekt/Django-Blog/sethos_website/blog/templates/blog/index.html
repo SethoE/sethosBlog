@@ -17,7 +17,7 @@
     <section class="latest-posts">
         <h2 class="latestPostHeader">My lastest reviews</h2>
         <ul class="individualPostsContainer">
-            {% for post in posts  %}
+            {% for post in lastest_posts  %}
                 {% include "blog/includes/post.html" %}
             {% endfor %}
         </ul>

@@ -24,7 +24,7 @@ all_posts = [
         "author": "Setho Ehrmann",
         "date": date(2021, 8, 7),
         "previewTitle": "My review on: No game no life",
-        "title": "Would you like to just play video games all day and are you really good at it?",
+        "title": "Would you like to just play video games all day and be rewarded for being good at it?",
         "excerpt": """Would you like to just play video games all day and are you really good at it? Nobody can compete with you? The world offers no challenges for you? Then how about a world where all problems are decided with games? Admittedly, it sounds unrealistic, but it is precisely this childish concept that No Game No Life wants to  take on.""",
         "content": """
         Excepturi culpa molestias velit dolorum quis dignissimos est dicta adipisci, dolor ratione obcaecati, autem pariatur dolor. Molestias consectetur numquam beatae, reprehenderit provident dolor doloribus placeat aliquid accusantium? Dolores itaque odio dicta deleniti soluta doloribus eligendi nemo vel praesentium reiciendis, beatae ex minima cupiditate quaerat eius sequi perferendis sit exercitationem voluptas. Dolorem neque mollitia commodi a ratione voluptas beatae voluptatem, ratione quisquam tempore, expedita velit reprehenderit corporis culpa odio aperiam explicabo accusamus fugiat voluptate, minima ut numquam repellat, dolores enim quo aspernatur? Amet maxime voluptate a ipsam odit numquam, consequatur voluptates eius molestias adipisci, laudantium quas quis, enim quidem magnam iste deleniti exercitationem est assumenda vel reiciendis ab. Sunt dolore deserunt ipsa doloremque necessitatibus commodi autem similique saepe quibusdam, eius libero totam tempora vero, autem aliquid optio, repellendus error voluptate eaque officiis? Dignissimos neque est animi, dolor recusandae ullam vel unde eaque? Saepe minima sequi deserunt vitae, explicabo reiciendis facilis vel illo dicta laborum pariatur nemo adipisci autem fugiat? Explicabo eligendi quidem. Tempore dolorem inventore facilis? Officia laboriosam illum pariatur laborum consectetur corporis aperiam dolorum, eveniet quos officiis sed ex atque deleniti repellendus animi voluptate autem. Nesciunt ullam nisi nostrum, earum harum quam dicta? Earum totam temporibus, aspernatur sed tempora quis neque minima itaque delectus facere mollitia odit, sit deleniti blanditiis consequuntur incidunt, atque nisi recusandae vero, consectetur provident delectus dolores possimus? Sint dignissimos quidem dolorum at placeat? Iste numquam accusamus alias cupiditate eius dicta, ad temporibus id repudiandae eum, eum tempora quisquam fuga aperiam? Sunt pariatur dolor vitae, saepe a voluptatum vel commodi earum, facilis alias beatae. Repudiandae deleniti nemo placeat repellendus ipsum fugiat atque, inventore facere vel voluptatum repudiandae temporibus alias rem, ullam commodi delectus veritatis aperiam. Ipsum eius tempora cupiditate vitae nam. Dolorum sit aliquam, quod asperiores doloribus fuga ducimus. Quia cumque provident ipsa sed harum consequatur unde voluptate, voluptatibus porro soluta unde suscipit, dolor ad nisi sequi exercitationem saepe incidunt quibusdam aut sed eius, modi veniam ipsam pariatur expedita ut dolorum numquam, non consectetur aspernatur veritatis saepe fuga voluptatem architecto? Nesciunt voluptatibus officiis corrupti inventore ratione incidunt perspiciatis, aut ipsa temporibus voluptatum obcaecati quod? Ut culpa voluptate repellendus iste velit, assumenda blanditiis dicta reiciendis obcaecati vel magnam. Deleniti laudantium obcaecati inventore asperiores quam accusamus adipisci minima pariatur, iusto dolorum doloremque, laudantium quibusdam ex laborum in asperiores cum quae. Aliquam eum voluptas obcaecati quidem cupiditate quos illum ipsa, unde suscipit dolores veritatis, cumque error eos, doloremque ad nemo fugiat fuga consequuntur vero molestias quod? Quaerat repellendus repudiandae animi sequi odit, mollitia rerum aspernatur illum labore fugit veritatis, corporis eum nisi veniam cum id dolorum impedit laboriosam alias minus, asperiores ratione voluptas fugiat ea facilis, tempore voluptates exercitationem sapiente.
@@ -63,23 +63,24 @@ def get_date(post):
 
 
 def index(request):
-    sorted_posts = sorted(all_posts, key=get_date)
-    last_post = sorted_posts[-3:]
+    sorted_posts = sorted(all_posts, key=get_date, reverse=True)
+    last_post = sorted_posts[:3]
     return render(request, "blog/index.html",
     {
-        "posts": last_post,
+        "lastest_posts": last_post,
     })
 
 def posts(request):
-    sorted_posts = sorted(all_posts, key=get_date)
+    sorted_posts = sorted(all_posts, key=get_date, reverse=True)
     return render(request, "blog/all-posts.html",
     {
-        "posts": sorted_posts
+        "all_posts": sorted_posts
     })
 
 
-def individualPost(request, individual_post):
+def individualPost(request, individual_post_slug):
+    identified_post = next(post for post in all_posts if post['slug'] == individual_post_slug)
     return render(request, "blog/individualpost.html",
     {
-        "title": individual_post
+        "individualPost": identified_post
     })

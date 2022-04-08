@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+{% load static %}
+{% block css_link %}
+<link rel="stylesheet" href="{% static "404.css" %}">
+{% endblock css_link %}
+{% block page_title %}404{% endblock page_title %}
+
+{% block body %}
+    <img src="{% static "images/background404.jpg"%}" alt="404">
+{% endblock body %}

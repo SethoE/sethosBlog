@@ -7,20 +7,20 @@
 {% block body %}
 <h1 class="title">See your individual post hier.</h1>
 <section class="summary">
-    <h2>{{ title }}</h2>
+    <h2>{{ individualPost.title }}</h2>
     <article>
-        <img src="https://i.imgur.com/0boNxjd.jpeg" alt="Post Title"/>
+        <img src="{{ individualPost.postImage }}" alt="{{ individualPost.slug }}"/>
         <div class="author">
-            <address>By Setho</address>
+            <address>By {{ individualPost.author }}</address>
             <div>
-                <p>Last updated on</p> <time>Marc 7th</time>
+                <p>Last updated on</p> <time>{{ individualPost.date }}</time>
             </div>
         </div>
     </article>
 </section>
 <main>
     <p>
-        {% lorem 10 b random %}
+        {{ individualPost.content }}
     </p>
 </main>
 

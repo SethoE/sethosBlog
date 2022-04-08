@@ -9,7 +9,7 @@
 <section class="all-posts">
     <h2 class="allPostsHeader">All my Reviews/Posts</h2>
     <ul class="individualPostsContainer">
-        {% for post in posts  %}
+        {% for post in all_posts %}
             {% include "blog/includes/post.html" %}
         {% endfor %}
     </ul>
