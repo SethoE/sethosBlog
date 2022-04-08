@@ -7,7 +7,7 @@ from django.shortcuts import render
 all_posts = [
     {
         "slug": "Welcome-to-the-NHK",
-        "previewImage": "https://static.wikia.nocookie.net/welcometothenhk/images/4/43/Satou.jpg/revision/latest/scale-to-width-down/704?cb=20130414132711",
+        "previewImage": "https://static.tvtropes.org/pmwiki/pub/images/welcome_to_the_nhk_179.jpg",
         "postImage":  "https://i.imgur.com/0boNxjd.jpeg",
         "author": "Setho Ehrmann",
         "date": date(2022, 2, 23),
