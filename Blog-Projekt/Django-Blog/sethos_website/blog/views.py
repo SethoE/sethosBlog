@@ -3,10 +3,11 @@ from django.shortcuts import render
 
 # Create your views here.
 
+
 all_posts = [
     {
         "slug": "Welcome-to-the-NHK",
-        "previewImage": "https://static.wikia.nocookie.net/welcometothenhk/images/8/80/-animepaper.net-vector-standard-anime-welcome-to-nhk-vecto-satou-tatsuhiro-39608-moutonzare-preview-d0ae7e2c.jpg/revision/latest/scale-to-width-down/250?cb=20130414131308",
+        "previewImage": "https://static.wikia.nocookie.net/welcometothenhk/images/4/43/Satou.jpg/revision/latest/scale-to-width-down/704?cb=20130414132711",
         "postImage":  "https://i.imgur.com/0boNxjd.jpeg",
         "author": "Setho Ehrmann",
         "date": date(2022, 2, 23),
